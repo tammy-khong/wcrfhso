@@ -4,6 +4,5 @@ WCRFHSO (Wikipedia Citation Remover for Hannah Science Olympiad) is an "efficien
 
 The app takes copied and pasted Wikipedia text as a string, parses it into a vector of individual characters, and scans for square brackets, eliminating them and the numbers in between. It achieves O(n) time complexity (ignoring the character vector splitting step, time complexity unbeknownst to me), which is INCREDIBLY REMARKABLE.
 
-
 Link can be found (here)[https://breadmuncher.shinyapps.io/WCRFHSO/]. Please send me lots of accolades, as I have toiled over this passion project and hope it contributes to the successes of Science Olympiad note sheets.
 
