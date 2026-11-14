@@ -20,6 +20,6 @@ fluidPage(
       textAreaInput("text", "Input text", value = "Wikipedia citation remove [1]", width='100%', height = '300px'),
       actionButton("sendtext", "Submit"),
       br(),
-      textOutput("cleanedText")
+      verbatimTextOutput("cleanedText")
     )
 )
