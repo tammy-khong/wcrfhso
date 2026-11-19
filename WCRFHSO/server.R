@@ -11,30 +11,36 @@ library(shiny)
 
 # Define server logic required to draw a histogram
 function(input, output, session) {
-    
-    output$cleanedText <- renderText({
-      inputref <- input$text
-      outText <- inputref
-      charsplit <- strsplit(outText, "")[[1]]
-      outText <- ""
-      citeStart = FALSE
-      for(ch in charsplit){
-       
-        if(ch == '['){
-        
-          citeStart = TRUE
+  
+      output$cleanedText <- renderText({
+        inputref <- input$text
+        outText <- inputref
+        charsplit <- strsplit(outText, "")[[1]]
+        outText <- ""
+        citeStart = FALSE
+        for(ch in charsplit){
+         
+          if(ch == '['){
+          
+            citeStart = TRUE
+          }
+          
+          if(citeStart == FALSE){
+            outText<- paste(outText, ch, sep = "")
+  
+          }else if(ch == ']'){
+            citeStart = FALSE
+          }
+          
         }
+        writeClipboard(paste(outText,""))
         
-        if(citeStart == FALSE){
-          outText<- paste(outText, ch, sep = "")
-
-        }else if(ch == ']'){
-          citeStart = FALSE
-        }
-        
-      }
+        paste(outText,"")  
+      #print(outText)
       
-      paste(outText,"")  
+      
+      
+
         #https://stackoverflow.com/questions/26721340/iterating-over-characters-of-string-r
         # https://www.w3schools.com/r/r_variables_concat.asp
         # Split the entire input into a vector of characters

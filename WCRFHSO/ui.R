@@ -18,7 +18,8 @@ fluidPage(
     # Sidebar with a slider input for number of bins
     mainPanel(
       textAreaInput("text", "Input text", value = "Wikipedia citation remove [1]", width='100%', height = '300px'),
-      actionButton("sendtext", "Submit"),
+      actionButton("sendtext", "Copy to Clipboard"),
+      
       br(),
       verbatimTextOutput("cleanedText")
     )
