@@ -33,7 +33,7 @@ function(input, output, session) {
           }
           
         }
-        write_clip(paste(outText,""), object = "character")
+        write_clip(paste(outText,""), object = "character", allow_non_interactive = TRUE)
         
         paste(outText,"")  
       #print(outText)
