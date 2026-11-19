@@ -5,7 +5,7 @@ account: breadmuncher
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 18401988
-bundleId: 12823678
+bundleId: 12841897
 url: https://breadmuncher.shinyapps.io/WCRFHSO/
 version: 1
 asMultiple: FALSE

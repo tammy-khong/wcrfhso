@@ -8,7 +8,7 @@
 #
 
 library(shiny)
-
+library(clipr)
 # Define server logic required to draw a histogram
 function(input, output, session) {
   
@@ -33,7 +33,7 @@ function(input, output, session) {
           }
           
         }
-        writeClipboard(paste(outText,""))
+        write_clip(paste(outText,""), object = "character")
         
         paste(outText,"")  
       #print(outText)
